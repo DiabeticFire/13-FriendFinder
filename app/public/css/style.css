@@ -1,0 +1,13 @@
+#header {
+    background-color: coral;
+    color: black;
+    border-bottom: 5px solid black;
+    height: 80px;
+}
+
+#footer {
+    background-color: coral;
+    color: black;
+    border-top: 5px solid black;
+    height: 40px;
+}

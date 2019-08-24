@@ -1,4 +1,4 @@
-const db = require("../models/index.js");
+const db = require("../models/users.js");
 
 module.exports = app => {
   app.get("/api/friends", (req, res) => {
