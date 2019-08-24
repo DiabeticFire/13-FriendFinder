@@ -5,7 +5,7 @@ module.exports = (app, path) => {
       if (err) throw err;
     });
   });
-  app.get("/survey", (req, res) => {
+  app.get("*", (req, res) => {
     let route = path.join(__dirname, "../public/survey.html");
     res.sendFile(path.resolve(route), err => {
       if (err) throw err;
