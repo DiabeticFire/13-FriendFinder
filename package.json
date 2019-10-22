@@ -1,0 +1,25 @@
+{
+  "name": "13-friendfinder",
+  "version": "1.0.0",
+  "description": "Homework for week 13.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "gh-pages": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiabeticFire/13-FriendFinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiabeticFire/13-FriendFinder/issues"
+  },
+  "homepage": "https://github.com/DiabeticFire/13-FriendFinder#readme"
+}
