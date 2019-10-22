@@ -4,24 +4,179 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://code.jquery.com/jquery.js"></script>
     <title>Survey</title>
   </head>
   <body>
     <h1>Let's get to know you better</h1>
+    <h3>
+      For each statement, answer how much you agree. 1 means you strongly dissagree, 5 means you strongly agree. Once
+      you have finished answering all the questions, hit done.
+    </h3>
 
     <form>
-      <div class="question" id="1">
-        <label for=""
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
       </div>
-      <div class="question" id="2"></div>
-      <div class="question" id="3"></div>
-      <div class="question" id="4"></div>
-      <div class="question" id="5"></div>
-      <div class="question" id="6"></div>
-      <div class="question" id="7"></div>
-      <div class="question" id="8"></div>
-      <div class="question" id="9"></div>
-      <div class="question" id="10"></div>
+
+      <div class="question" id="1">
+        <label for="question1" id="question1Label">I have a kind word for everyone.</label>
+        <select name="question1" id="question1Select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+
+      <div class="question" id="2">
+        <label for="question1" id="question1Label">I feel I am better than other people.</label>
+        <select name="question1" id="question2Select">
+          <option value="5">1</option>
+          <option value="4">2</option>
+          <option value="3">3</option>
+          <option value="2">4</option>
+          <option value="1">5</option>
+        </select>
+      </div>
+
+      <div class="question" id="3">
+        <label for="question1" id="question1Label">I am always prepared.</label>
+        <select name="question1" id="question3Select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+
+      <div class="question" id="4">
+        <label for="question1" id="question1Label">I avoid taking on a lot of responsibility.</label>
+        <select name="question1" id="question4Select">
+          <option value="5">1</option>
+          <option value="4">2</option>
+          <option value="3">3</option>
+          <option value="2">4</option>
+          <option value="1">5</option>
+        </select>
+      </div>
+
+      <div class="question" id="5">
+        <label for="question1" id="question1Label">I feel comfortable around people.</label>
+        <select name="question1" id="question5Select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+
+      <div class="question" id="6">
+        <label for="question1" id="question1Label">I make friends easily.</label>
+        <select name="question1" id="question6Select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+
+      <div class="question" id="7">
+        <label for="question1" id="question1Label">I believe in the importance of art.</label>
+        <select name="question1" id="question7Select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+
+      <div class="question" id="8">
+        <label for="question1" id="question1Label">I am interested in the meaning of things.</label>
+        <select name="question1" id="question8Select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+
+      <div class="question" id="9">
+        <label for="question1" id="question1Label">I often feel blue.</label>
+        <select name="question1" id="question9Select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+
+      <div class="question" id="10">
+        <label for="question1" id="question1Label">There are many things that I do not like about myself.</label>
+        <select name="question1" id="question10Select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+
+      <div>
+        <button type="submit">Done</button>
+      </div>
     </form>
+
+    <script type="text/javascript">
+      $(document).ready(() => {
+        $("button").on("click", (event) => {
+          event.preventDefault();
+
+          // I kepy getting undefined as the value of $("#qustion1Select").val(), so I commented this out and janked it instead.
+
+          // let newFriend = {
+          //   name: $("#name")
+          //     .val()
+          //     .trim(),
+          //   scores: [
+          //     Number($("#qustion1Select").val()) + Number($("#question2Select").val()),
+          //     Number($("#qustion3Select").val()) + Number($("#question4Select").val()),
+          //     Number($("#qustion5Select").val()) + Number($("#question6Select").val()),
+          //     Number($("#qustion7Select").val()) + Number($("#question8Select").val()),
+          //     Number($("#qustion9Select").val()) + Number($("#question10Select").val())
+          //   ]
+          // };
+
+          let newFriend = {
+            name: $("#name")
+              .val()
+              .trim(),
+            scores: [
+              Math.floor(Math.random() * 10 + 1),
+              Math.floor(Math.random() * 10 + 1),
+              Math.floor(Math.random() * 10 + 1),
+              Math.floor(Math.random() * 10 + 1),
+              Math.floor(Math.random() * 10 + 1)
+            ]
+          };
+
+          console.log(newFriend);
+
+          $.post("/api/friends", newFriend).done((data) => {
+            console.log("I AM HERE");
+
+            $("body").append($("h3").text("Your best friend is: " + data));
+          });
+        });
+      });
+    </script>
   </body>
 </html>
